@@ -1,0 +1,20 @@
+sort(A, A + n);                            
+// 1. Sorts a C-style array A[0] to A[n-1] in ascending order (default behavior)
+
+sort(vec.begin(), vec.end());             
+// 2. Sorts the entire vector from vec[0] to vec[vec.size() - 1] in ascending order
+
+sort(A, A + n, greater<int>());           
+// 3. Sorts array A[0] to A[n-1] in descending order using the built-in comparator std::greater
+
+sort(vec.begin(), vec.end(), greater<>()); 
+// 4. Sorts the full vector in descending order using std::greater
+
+sort(A, A + n, custom_cmp);               
+// 5. Sorts array using a custom comparator function (e.g., sort by absolute value or special rule)
+
+sort(vec.begin(), vec.end(), custom_cmp); 
+// 6. Sorts vector using a custom comparator function (e.g., even numbers first, then odds)
+
+sort(vec.begin() + 1, vec.begin() + 4);   
+// 7. Sorts only a subrange of the vector: vec[1] to vec[3] (3 elements) in ascending order
